@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ruluko&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Patropi</title>
+</head>
+
+<body>
+    <div class="container-fluid main-container">
+        <audio id="sounds" type="audio/mpeg"></audio>
+        <h3 id="title">Patropi</h3>
+        <div class="row h-100 w-100">
+            <div id="board" class="col">
+                <div id="firstPage">
+                    <h4>Idioma/Language:</h4>
+                    <div id="language">
+                        <button id="es" class="flag"></button>
+                        <button id="en" class="flag"></button>
+                    </div>
+                </div>
+                <div id="play-now">
+                    <h4 id='welcome'>¡Bienvenido al País Tropical!</h4>
+                    <p id='samba'>Brasil es mucho más que samba y fútbol.</p>
+                    <p id='play'>¡Juega <span>Patropi</span> y descubre!</p>
+                    <div class="rules">
+                        <p id='how'><strong>Cómo jugar:</strong></p>
+                        <ol>
+                            <li>Activa el sonido de tu dispositivo. </li>
+                            <li>En cada ronda, una foto. </li>
+                            <li>Marca en el mapa donde ha sido sacada la fotografía. Sin googlear, ¡listillo!.</li>
+                            <li>Por cada acierto, 1 punto.</li>
+                            <li>¡Tienes 10 oportunidades para probar que sabes todo sobre Brasil!</li>
+                        </ol>
+                    </div>
+                    <button id="start-button">¡Jugar!</button>
+                </div>
+                <div id="map">
+                    <img
+                        src="https://cdn.goconqr.com/uploads/label_image_drag_and_drop_question/image/1939523/image_primary_8d335017-e45e-4a34-8d76-8054a30eb4ab.png">
+                    <a href="#" title="Amazonas" class="states"
+                        style="position: absolute; left: 18.8%; top: 21.68%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Espírito Santo" class="states"
+                        style="position: absolute; left: 74.6%; top: 63.56%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Rio de Janeiro" class="states"
+                        style="position: absolute; left: 70.2%; top: 70.26%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="São Paulo" class="states"
+                        style="position: absolute; left: 56.9%; top: 70.26%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Santa Catarina" class="states"
+                        style="position: absolute; left: 53.3%; top: 82.07%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Paraná" class="states"
+                        style="position: absolute; left: 49.8%; top: 75.48%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Rio Grande do Sul" class="states"
+                        style="position: absolute; left: 45%; top: 88.2%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Bahia" class="states"
+                        style="position: absolute; left: 72.9%; top: 44.04%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Distrito Federal" class="states"
+                        style="position: absolute; left: 57.6%; top: 52.89%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Goiás" class="states"
+                        style="position: absolute; left: 53.5%; top: 55.73%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Mato Grosso do Sul" class="states"
+                        style="position: absolute; left: 42.2%; top: 64.13%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="" title="Mato Grosso" class="states"
+                        style="position: absolute; left: 40.5%; top: 45.63%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Paraíba" class="states"
+                        style="position: absolute; left: 83.7%; top: 30.76%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Pernambuco" class="states"
+                        style="position: absolute; left: 84.2%; top: 33.94%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Alagoas" class="states"
+                        style="position: absolute; left: 83.4%; top: 37%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Sergipe" class="states"
+                        style="position: absolute; left: 81.2%; top: 40.75%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Rio Grande do Norte" class="states"
+                        style="position: absolute; left: 83.4%; top: 27.47%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Ceará" class="states"
+                        style="position: absolute; left: 75.5%; top: 24.18%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Piauí" class="states"
+                        style="position: absolute; left: 68.8%; top: 32.69%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Maranhão" class="states"
+                        style="position: absolute; left: 62.8%; top: 25.43%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Tocantins" class="states"
+                        style="position: absolute; left: 57%; top: 38.48%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Pará" class="states"
+                        style="position: absolute; left: 46.1%; top: 23.16%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Amapá" class="states"
+                        style="position: absolute; left: 49.5%; top: 9.76%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Acre" class="states"
+                        style="position: absolute; left: 9.9%; top: 36.78%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Roraima" class="states"
+                        style="position: absolute; left: 28.8%; top: 8.06%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Acre" class="states"
+                        style="position: absolute; left: 25.7%; top: 41.43%; width: 2%; height: 2.27%; z-index: 2;"></a><a
+                        href="#" title="Minas Gerais" class="states"
+                        style="position: absolute; left: 65.3%; top: 59.7%; width: 2%; height: 2.27%; z-index: 2;"></a>
+                </div>
+                <div id="cards">
+                    <div class="score">
+                        <p id="points">Puntos: <span> 0</span></p>
+                        <p id="rounds">Rondas: <span> 1</span></p>
+                    </div>
+                    <audio id="music" src="./sounds/Sergio Mendes - Pais Tropical.mp3" controls="controls"
+                        loop="loop"></audio>
+                    <div id="card-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/dictionary.js"></script>
+    <script src="javascript/logic.js"></script>
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>

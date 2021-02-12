@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-image: url(https://img.freepik.com/vector-gratis/fondo-tropical-animales_52683-5226.jpg?size=626&ext=jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#title {
+  color: #ffcb44;
+  font-size: 4.2rem;
+  text-shadow: 2px 2px 2px #000000;
+  position: relative;
+  z-index: 2;
+  top: 33px;
+}
+
+
+#board {
+  background: #fffceb;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 20px -6px #615961;
+  padding: 20px;
+  height: 95%;
+}
+
+#firstPage {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#language {
+  margin-top: 20px;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  margin: 15px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-size: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#es {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png);
+}
+
+#en {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4UMGlHLAoD3RqYh1dISouSQ4qQF_5vG0DFenDbtZk-2eX37oQ&usqp=CAU);
+}
+
+#play-now {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-size: 13px;
+}
+
+#welcome {
+  text-align: center;
+}
+
+#play-now p {
+  margin: 0
+}
+
+#play {
+  margin: 10px !important;
+  font-weight: bold;
+  font-size: .8rem
+}
+
+#play span {
+  color: #ffcb44;
+}
+
+#how {
+  margin-bottom: 15px !important;
+}
+
+#map {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+#map img {
+  width: 100%;
+}
+
+a {
+  display: none;
+  background-color: #d1d1d1;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+
+#cards {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  backface-visibility: hidden;
+  perspective: 500px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 0.7rem;
+  background-color: #739d55;
+  border-radius: 5px;
+  color: #fffceb;
+}
+
+.score p {
+  margin: 0;
+}
+
+#card-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.8);
+}
+
+.front {
+  position: relative;
+  border-radius: 20px;
+}
+
+.face {
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.textPhoto {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  text-shadow: 1px 2px 2px black;
+  backface-visibility: hidden;
+}
+
+.back.face {
+  display: flex;
+  position: absolute;
+  backface-visibility: hidden;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: wheat;
+  transform: rotateY(180deg);
+  box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+#next-button {
+  background-color: #739d55;
+  padding: 8px;
+  position: absolute;
+  top: -25px;
+  color: #fffceb;
+  border-radius: 8px;
+  border: none;
+  font-size: .7rem;
+  width: 40%;
+}
+
+#start-button {
+  background-color: #739d55;
+  padding: 8px;
+  color: #fffceb;
+  border-radius: 8px;
+  border: none;
+  font-size: .9rem;
+}
+
+.font-right-answer {
+  font-size: .5rem;
+}
+
+.font-wrong-answer {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  font-size: .7rem
+}
+
+#music {
+  display: none;
+}
+
+#card-container.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
+@media (min-width: 768px) {
+  #title {
+    font-size: 7rem;
+    top: 50px;
+
+  }
+
+  #board {
+    display: flex;
+    margin: 0 100px;
+  }
+
+  #map {
+    width: 50%;
+  }
+
+  #cards {
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .card-big-scren {
+    display: flex;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+  }
+
+  #play-now {
+    width: 100%;
+  }
+
+  #welcome {
+    font-size: 3rem
+  }
+
+  #samba {
+    font-size: 1.6rem
+  }
+
+  #play {
+    font-size: 1.5rem
+  }
+
+  .rules {
+    font-size: 1rem
+  }
+
+  #start-button {
+    font-size: 1.3rem;
+    padding: 5px 20px
+  }
+
+  #card-container {
+    height: 50%;
+  }
+
+  .card-container-big-screen {
+    width: 50% !important;
+  }
+
+  .score {
+    padding: 10px 20px;
+  }
+
+  .score p {
+    font-size: 1rem
+  }
+
+  .font-right-answer {
+    font-size: .9rem;
+  }
+
+  .font-wrong-answer {
+    font-size: 1.4rem;
+  }
+
+  #next-button {
+    font-size: 1.3rem;
+  }
+
+  #firstPage {
+    width: 100%;
+  }
+
+  .card-text {
+    font-size: 1.2rem
+  }
+
+  .textPhoto{
+    font-size: 1.4rem
+  }
+
+}
